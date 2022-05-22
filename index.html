@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1 Assignment</title>
+    <title>Module 2 Assignment</title>
 </head>
 <body>
-    <h1>JavaScript Webpage</h1>
-    <p></p>
+    <h1>Welcome!</h1>
+<p id="bodyText"></p>
+
+<button onclick="numberFunction()" id="button">Enter Your Number!</button>
     <script>
-        alert("Bill Gates owes me $1,000,000")
-        console.log("Hello world!")
-        document.write("<p>I wrote this using JavaScript</p>")
+        const piValue = 3.1415926;
+
+            let fName = prompt("Welcome. Please enter your first name.")
+
+            document.getElementById("bodyText").innerHTML = "Welcome to my site " + fName + ". I hope you have a wonderful time!"
+
+            function numberFunction() {
+                let myFavNum = prompt("What is your favorite number?");
+                let myArea = piValue * myFavNum * myFavNum
+                document.getElementById("bodyText").innerHTML = `Great number ${fName}! If your number ${myFavNum} was a radius of a circle, the area of the circle would be ${myArea}.`
+            }
     </script>
 </body>
 </html>
